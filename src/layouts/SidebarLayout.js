@@ -16,6 +16,7 @@ import Footer from "./Footer";
 import theme from "../theme";
 
 export default function SidebarLayout(props) {
+  // eslint-disable-next-line react/prop-types
   const { children } = props;
 
   const sidebar = {
