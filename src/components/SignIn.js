@@ -11,7 +11,10 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
+import { useTranslation } from "react-i18next";
+
 export default function SignIn() {
+  const { t, i18n } = useTranslation();
   const handleSubmit = event => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -36,7 +39,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          {t("SignIn")}
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -68,7 +71,7 @@ export default function SignIn() {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Sign In
+            {t("SignIn")}
           </Button>
           <Grid container>
             <Grid item xs>
@@ -78,7 +81,7 @@ export default function SignIn() {
             </Grid>
             <Grid item>
               <Link href="/" variant="body2">
-                Don&apos;t have an account? Sign Up
+                {t("SignUp")}
               </Link>
             </Grid>
           </Grid>
