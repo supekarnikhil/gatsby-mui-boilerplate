@@ -14,6 +14,7 @@
     "@mui/material": "^5.5.3",
     "gatsby": "^4.11.1",
     "gatsby-plugin-react-helmet": "^5.11.0",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0"
@@ -39,7 +40,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "eslint --fix src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint --fix src/**/*.js",
     "test": "jest",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   }
