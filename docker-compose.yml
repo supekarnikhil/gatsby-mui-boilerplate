@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  fittr_knowledge_center:
+    image: fittr-kc-gatsby
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - 8000:8000
