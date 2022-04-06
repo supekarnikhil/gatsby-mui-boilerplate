@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -9,14 +10,13 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Footer from "./Footer";
+import Header from "../sections/Header";
+import Sidebar from "../sections/Sidebar";
+import Footer from "../sections/Footer";
 
-import theme from "../theme";
+import theme from "../../theme";
 
-export default function SidebarLayout(props) {
-  // eslint-disable-next-line react/prop-types
+export default function RightSidebarLayout(props) {
   const { children } = props;
 
   const sidebar = {
@@ -72,3 +72,7 @@ export default function SidebarLayout(props) {
     </ThemeProvider>
   );
 }
+
+RightSidebarLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

@@ -5,11 +5,11 @@ import Box from "@mui/material/Box";
 import ProTip from "../components/ProTip";
 import Link from "../components/Link";
 
-import MainLayout from "../layouts/MainLayout";
+import LandingPageLayout from "../layouts/page_layouts/LandingPageLayout";
 
 export default function Index() {
   return (
-    <MainLayout>
+    <LandingPageLayout>
       <Container maxWidth="sm">
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom>
@@ -21,6 +21,6 @@ export default function Index() {
           <ProTip />
         </Box>
       </Container>
-    </MainLayout>
+    </LandingPageLayout>
   );
 }

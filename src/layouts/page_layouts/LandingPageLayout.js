@@ -1,15 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 
-import Header from "./Header";
-import Footer from "./Footer";
-import theme from "../theme";
+import Header from "../sections/Header";
+import Footer from "../sections/Footer";
+import theme from "../../theme";
 
-export default function MainLayout(props) {
-  // eslint-disable-next-line react/prop-types
+export default function LPGLayout(props) {
   const { children } = props;
 
   return (
@@ -29,3 +29,7 @@ export default function MainLayout(props) {
     </ThemeProvider>
   );
 }
+
+LPGLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

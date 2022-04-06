@@ -1,11 +1,11 @@
 import * as React from "react";
 import SignIn from "../components/SignIn";
-import MainLayout from "../layouts/MainLayout";
+import LandingPageLayout from "../layouts/page_layouts/LandingPageLayout";
 
 export default function Index() {
   return (
-    <MainLayout>
+    <LandingPageLayout>
       <SignIn />
-    </MainLayout>
+    </LandingPageLayout>
   );
 }
